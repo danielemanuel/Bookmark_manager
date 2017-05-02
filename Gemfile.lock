@@ -117,6 +117,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   data_mapper
+  dm-migrations
   dm-postgres-adapter
   rake
   rspec
