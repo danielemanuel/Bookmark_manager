@@ -19,7 +19,7 @@ require 'capybara/rspec'
 require 'rspec'
 
 # tell Capybara about our app class
-Capybara.app = Rps
+Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
   config.after(:suite) do
