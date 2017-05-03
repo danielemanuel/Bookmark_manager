@@ -2,7 +2,9 @@
 class Tag
   include DataMapper::Resource
 
-  property :id,   Serial 
+  has n, :links, through: Resource
+  
+  property :id,   Serial
   property :name, String
 
 end
