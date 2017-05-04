@@ -7,8 +7,7 @@ gem 'sinatra'
 gem 'data_mapper','~>1.2.0'
 gem 'dm-postgres-adapter'
 gem 'database_cleaner'
-# gem 'nokigiri','~>1.7.1'
-# gem 'pg'
+
 
 group :test do
   gem 'capybara'
