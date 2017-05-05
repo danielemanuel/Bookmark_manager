@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'data_mapper','~>1.2.0'
 gem 'dm-postgres-adapter'
 gem 'database_cleaner'
+gem 'bcrypt'
 
 
 group :test do
