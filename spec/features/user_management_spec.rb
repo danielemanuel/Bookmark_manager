@@ -14,6 +14,8 @@ feature 'User sign up' do
     fill_in :password, with: 'jessica'
     fill_in :password_confirmation, with: 'password'
     click_button 'Sign up'
-    expect(page).not_to have_content('Welcome, jessicabarclay@email.com')
+    expect(page).to have_content('Passwords do not match')
+    expect(current_path).to eq '/users'
   end
+
 end

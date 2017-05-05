@@ -10,6 +10,9 @@
     <% if current_user %>
       Welcome, <%= current_user.email %>
     <% end %>
-    <%= yield %>  
+    <% if flash[:error] %>
+      <div id='error'><%= flash[:error] %></div>
+    <% end %>
+    <%= yield %>
   </body>
 </html>
