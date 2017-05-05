@@ -18,6 +18,7 @@ require 'capybara/rspec'
 require 'rspec'
 require './app/models/link'
 require 'database_cleaner'
+# require 'web_helpers'
 
 
 # tell Capybara about our app class
