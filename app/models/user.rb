@@ -4,12 +4,12 @@ class User
     include DataMapper::Resource
 
     attr_accessor :password_confirmation
-    attr_reader :password
+    attr_reader :password, :email
 
     has n, :links, through: Resource
 
     property :id,  Serial
-    property :email, String
+    property :email, String, required: true
     property :password_digest, Text
 
     validates_confirmation_of :password

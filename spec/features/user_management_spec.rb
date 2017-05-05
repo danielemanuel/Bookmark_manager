@@ -18,4 +18,13 @@ feature 'User sign up' do
     expect(current_path).to eq '/users'
   end
 
+  scenario 'sign up fails if emails do not match' do
+    visit '/users/new'
+    expect(page.status_code).to eq(200)
+    fill_in :email,    with: nil
+    fill_in :password, with: 'jessica'
+    fill_in :password_confirmation, with: 'jessica'
+    click_button 'Sign up'
+    expect(current_path).to eq '/users'
+  end
 end
